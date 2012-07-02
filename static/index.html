@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="http://mbostock.github.com/d3/d3.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="http://cloud.github.com/downloads/SteveSanderson/knockout/knockout-2.1.0.js"></script>
+	
+
+	<link href="static/bootstrap/css/bootstrap.css" rel="stylesheet">
+	 <link href="static/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+
+<title>TradeArc</title>
+	
+</head>
+
+<div class="container">
+
+    <body class="preview" data-spy="scroll" data-target=".subnav" data-offset="50">
+		<header class="jumbotron subhead" id="overview">
+		  <h1>TradeArc</h1>
+		  <p class="lead">Visualization of NHL trades that have taken place since June 15 2012</p>
+		</header>
+		<div class="row">
+		  <div id="trades" class="span8"></div>
+		  <div class="span4"><div class="well">
+		        <p><strong data-bind="text: tradeDate"></strong></p>
+				<img data-bind="attr: {src: teamA}"></img>
+				<ul class="unstyled" data-bind="foreach: teamACompensation">
+					<li data-bind="text: $data"></li>
+				</ul>
+				<img data-bind="attr: {src: teamB}"></img>
+				<ul class="unstyled" data-bind="foreach: teamBCompensation">
+					<li data-bind="text: $data"></li>
+				</ul>
+		      </div>
+		</div>
+		</div>
+	
+	
+	<script type="text/javascript" src="static/visualize.js"></script>
+	</body>
+</div>
+</html>
