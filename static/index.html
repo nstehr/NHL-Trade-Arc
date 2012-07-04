@@ -16,27 +16,39 @@
 <div class="container">
 
     <body class="preview" data-spy="scroll" data-target=".subnav" data-offset="50">
-		<header class="jumbotron subhead" id="overview">
-		  <h1>TradeArc</h1>
-		  <p class="lead">Visualization of NHL trades that have taken place since June 15 2012</p>
-		</header>
+		
 		<div class="row">
-		  <div id="trades" class="span8"></div>
-		  <div class="span4"><div class="well">
-		        <p><strong data-bind="text: tradeDate"></strong></p>
+		  <span class="span12"><h1>TradeArc</h1></span>
+		</div>
+		 
+		
+		<div class="row">
+			<div class="span8">
+			 <p class="lead">Visualization of NHL trades that have taken place since June 15 2012</p>
+			</div>
+		  <div class="span4" ><div class="well" style="height: 100px">
+		     
+		   <p><strong data-bind="text: tradeDate"></strong></p>
+			   <div class="row">	
+				<div class="span2">
 				<img data-bind="attr: {src: teamA}"></img>
 				<ul class="unstyled" data-bind="foreach: teamACompensation">
 					<li data-bind="text: $data"></li>
 				</ul>
+				</div>
+				
+			<div class="pull-right">
 				<img data-bind="attr: {src: teamB}"></img>
 				<ul class="unstyled" data-bind="foreach: teamBCompensation">
 					<li data-bind="text: $data"></li>
 				</ul>
-		      </div>
+			</div>
+				
+		     </div>
 		</div>
 		</div>
 	
-	
+	<div id="trades" class="span8"></div>
 	<script type="text/javascript" src="static/visualize.js"></script>
 	</body>
 </div>

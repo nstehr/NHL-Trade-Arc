@@ -11,7 +11,6 @@ function TradeViewModel() {
     this.teamB = ko.observable();
     this.teamACompensation = ko.observableArray();
     this.teamBCompensation = ko.observableArray();
-
 }
 
 var viewModel = new TradeViewModel();
@@ -45,7 +44,7 @@ function renderTradeChart(jsondata){
 	    .domain(teams)
 	    .rangeBands([0,chartWidth]);
 	//put the team logo's near the bottom of the visualization
-	var y = chartHeight * 0.88;
+	var y = chartHeight * 0.70;
 	
 	var colour = d3.scale.category20c();
 	
